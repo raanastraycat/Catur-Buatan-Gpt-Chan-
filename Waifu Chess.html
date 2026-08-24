@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Waifu Chess</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Waifu Chess</h1>
+    <div id="info">Giliran: <span id="turn">Bidak Tempur</span></div>
+  </header>
+
+  <div id="container">
+    <!-- Left panel -->
+    <aside id="left-panel" class="panel">
+      <h2>Bidak Tempur</h2>
+      <div class="piece-list">
+        <div class="piece-row"><img src="img/white_king.jpg" class="side-img"><span>King</span></div>
+        <div class="piece-row"><img src="img/white_queen.jpg" class="side-img"><span>Queen</span></div>
+        <div class="piece-row"><img src="img/white_rook.jpg" class="side-img"><span>Rook</span></div>
+        <div class="piece-row"><img src="img/white_bishop.jpg" class="side-img"><span>Bishop</span></div>
+        <div class="piece-row"><img src="img/white_knight.jpg" class="side-img"><span>Knight</span></div>
+        <div class="piece-row"><img src="img/white_pawn.jpg" class="side-img"><span>Pawn</span></div>
+      </div>
+
+      <div class="left-controls">
+        <button id="botBtn">Play vs Bot: OFF</button>
+        <button id="undoBtn">Undo (Ctrl+Z)</button>
+        <button id="resetBtn">Restart</button>
+      </div>
+    </aside>
+
+    <!-- Center board -->
+    <main id="center-panel">
+      <div id="board-wrap">
+        <div id="chessboard" role="grid" aria-label="Chessboard"></div>
+      </div>
+    </main>
+
+    <!-- Right panel -->
+    <aside id="right-panel" class="panel">
+      <h2>Bidak Musik</h2>
+      <div class="piece-list">
+        <div class="piece-row"><img src="img/black_king.jpg" class="side-img"><span>King</span></div>
+        <div class="piece-row"><img src="img/black_queen.jpg" class="side-img"><span>Queen</span></div>
+        <div class="piece-row"><img src="img/black_rook.jpg" class="side-img"><span>Rook</span></div>
+        <div class="piece-row"><img src="img/black_bishop.jpg" class="side-img"><span>Bishop</span></div>
+        <div class="piece-row"><img src="img/black_knight.jpg" class="side-img"><span>Knight</span></div>
+        <div class="piece-row"><img src="img/black_pawn.jpg" class="side-img"><span>Pawn</span></div>
+      </div>
+
+      <div id="timer-box">
+        <div class="timer-label">Waktu permainan</div>
+        <div id="timer">00:00:00</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Promotion popup (2x2) -->
+  <div id="promotion-overlay">
+    <div class="promo-box">
+        <p class="promo-title">Pilih Satu</p>
+
+        <div class="promo-grid">
+            <div class="promo-item" id="promoQ">
+                <img class="promo-img" id="promoQimg">
+                <p class="promo-label">Queen</p>
+            </div>
+
+            <div class="promo-item" id="promoR">
+                <img class="promo-img" id="promoRimg">
+                <p class="promo-label">Rook</p>
+            </div>
+
+            <div class="promo-item" id="promoB">
+                <img class="promo-img" id="promoBimg">
+                <p class="promo-label">Bishop</p>
+            </div>
+
+            <div class="promo-item" id="promoN">
+                <img class="promo-img" id="promoNimg">
+                <p class="promo-label">Knight</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Checkmate overlay -->
+  <div id="checkmate-overlay" aria-hidden="true">
+    <div id="checkmate-box">
+      <h2 id="checkmate-text">Checkmate</h2>
+      <button id="checkmate-ok">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
