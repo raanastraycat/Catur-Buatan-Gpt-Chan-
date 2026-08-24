@@ -1,3 +1,5 @@
+import { OPENWEATHER_API_KEY} from "js/config.js";
+
 /* =============== File Mapping =============== */
 function pieceToFile(p){
     const map = {
